@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>blinkit</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<!-- tailwinds css -->
+<link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+<!-- font address  -->
+ <link rel='stylesheet' type='text/css' media='screen' href='css/font-awesome.css'>
+<!-- tailwind js -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<header class="bg-white shadow top-0  z-50 sticky">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Top row -->
+    <div class="flex items-center justify-between py-4">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <h1 class="font-bold text-3xl sm:text-4xl">
+          <span class="text-yellow-400">Blink</span
+          ><span class="text-green-600">it</span>
+        </h1>
+      </div>
+
+      <!-- Desktop / Tablet search -->
+      <div class="hidden md:block flex-1 mx-6">
+        <input
+          type="text"
+          placeholder="Search for products..."
+          class="border border-gray-300 rounded-full px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+      </div>
+
+      <!-- Desktop / Tablet buttons -->
+      <div class="hidden md:flex items-center gap-3">
+        <button command="show-modal" commandfor="dialog"
+          class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700"
+        >
+          Login
+        </button>
+        <button command="show-modal" commandfor="dialog1"
+          class="bg-yellow-400 text-white px-4 py-2 rounded-full hover:bg-yellow-500"
+        >
+          Cart
+        </button>
+      </div>
+
+      <!-- Mobile toggler -->
+      <button
+        id="menuToggle"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-gray-200 hover:bg-gray-100"
+        aria-label="Toggle menu"
+      >
+        <!-- simple hamburger icon -->
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div id="mobileMenu" class="md:hidden space-y-3 pb-4 hidden">
+      <!-- search box -->
+      <div>
+        <input
+          type="text"
+          placeholder="Search for products..."
+          class="border border-gray-300 rounded-full px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+      </div>
+
+      <!-- login & cart buttons -->
+      <div class="flex flex-col xs:flex-row gap-3">
+        <button command="show-modal" commandfor="dialog"
+          class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 w-full"
+        >
+          Login
+        </button>
+        <button command="show-modal" commandfor="dialog1"
+          class="bg-yellow-400 text-white px-4 py-2 rounded-full hover:bg-yellow-500 w-full"
+        >
+          Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- hero section  -->
+<section class="py-5">
+  <div class="max-w-full mx-auto px-4 sm:px-14 lg:px-18 text-center">
+    <img
+      src="c:\Users\Admin\Pictures\Screenshots\Screenshot 2025-12-13 100728.png"
+      alt="Blinkit Banner"
+      class="w-full mx-auto rounded-lg  sm:h-70 md:h-75 lg:h-80"
+    />
+  </div>
+</section>
+
+<!-- content section -->
+<section class="py-5">
+ <!-- divide 3 section using flex and flex-wrap -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap -mx-2">
+        <!-- card 1 -->
+        <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
+        <div class="bg-white rounded-lg shadow">
+            <img
+            src="d:\frontend\modual-5 tailwind\image\pharmacy-WEB.avif"
+            alt="Category 1"
+            class="w-full h-40  rounded-md mb-4"
+            />
+           
+        </div>
+        </div>
+        <!-- card 2 -->
+        <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
+        <div class="bg-white rounded-lg shadow">
+            <img
+            src="d:\frontend\modual-5 tailwind\image\pet food.avif"
+            alt="Category 2"
+            class="w-full h-40  rounded-md mb-4"
+            />
+         
+        </div>
+        </div>
+        <!-- card 3 -->
+        <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
+        <div class="bg-white rounded-lg shadow">
+            <img
+            src="d:\frontend\modual-5 tailwind\image\babycare-WEB.avif"
+            alt="Category 3"
+            class="w-full h-40  rounded-md mb-4"
+            />
+          
+        </div>
+        </div>
+    </div>
+
+    <!-- product grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-10 gap-2 mt-8">
+        <!-- product card -->
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\paan-corner_web1.avif"
+            alt="Product 1"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+        </div>
+        <!-- repeat product card for more products -->
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-2_102.avif"
+            alt="Product 2"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-3_9 3.avif"
+            alt="Product 3"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-4_9 4.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+         <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\slice-5.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+         <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-6_5 6.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+  <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-7_3 7.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+         <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-7-1_0 9.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+         <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-8_4 8.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+         <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+         <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+         <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+        <img
+            src="d:\frontend\modual-5 tailwind\image\Slice-10.avif"
+            alt="Product 4"
+            class="w-full h-40 object-cover rounded-md mb-4"
+        />
+       </div>
+       </div>
+
+      
+       <!-- dairy,braed and egg -->
+        <div class="mt-8">
+        <p class="sm:text-sm md:text-xl lg:text-2xl font-semibold mb-4">Dairy, Bread & Eggs<button type="button" class="float-end bg-white border-0 text-green-500">see all</button></p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4">
+            <!-- product card -->
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\amul gold milk.avif"
+                alt="Product 1"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">amul gold milk </p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            <!-- repeat product card for more products -->
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\amul masti cup curd.avif"
+                alt="Product 2"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+          <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">masti cup curd</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\amul pouch curd.avif"
+                alt="Product 3"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+          <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">amul pouch curd</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\amul salted butter.avif"
+                alt="Product 4"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">amul  butter</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+
+             <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\amul taaza toned milk.avif"
+                alt="Product 5"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4"> taaza toned milk</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+             <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\amul cheese cubes.avif"
+                alt="Product 6"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">cheese cubes</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+
+          </div>
+        </div>
+
+
+         <!-- Candies & Gums -->
+        <div class="mt-8">
+        <p class="sm:text-sm md:text-xl lg:text-2xl font-semibold mb-4">Candies & Gums <button type="button" class="float-end bg-white border-0 text-green-500">see all</button></p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4">
+            <!-- product card -->
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\chupa chups.avif"
+                alt="Product 1"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">chupa chups</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\kopiko cappuccino.avif"
+                alt="Product 2"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+          <p class="sm:text-sm md:text-sm lg:text-xl  mb-4"> cappuccino</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\happydent wave.avif"
+                alt="Product 3"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+          <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">happydent wave</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\happydent suger free wave.avif"
+                alt="Product 4"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">suger free wave</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+
+             <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\boomer krunch chewing gum.avif"
+                alt="Product 5"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">boomer krunch </p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+             <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\orbit spearmint.avif"
+                alt="Product 6"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">orbit spearmint</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+
+          </div>
+        </div>
+
+
+         <!-- Cold Drinks & Juices -->
+        <div class="mt-8">
+        <p class="sm:text-sm md:text-xl lg:text-2xl font-semibold mb-4">Cold Drinks & Juices <button type="button" class="float-end bg-white border-0 text-green-500">see all</button></p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4">
+            <!-- product card -->
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\redbull energy drink.avif"
+                alt="Product 1"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">rebull energy drink </p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\coca-cola diet coke soft drink.avif"
+                alt="Product 2"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+          <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">coca-cola diet coke soft drink</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\monster energy drink.avif"
+                alt="Product 3"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+          <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">monster energy drink</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\Hell classic energy drink.avif"
+                alt="Product 4"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Hell classic energy drink </p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+
+             <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\poko loko lychee nata juice.avif"
+                alt="Product 5"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">poko loko lychee nata juice</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+             <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\coolberg cranberry non-alcoholic beer.avif"
+                alt="Product 6"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">coolberg  non-alcoholic beer</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+
+          </div>
+        </div>
+
+         <!-- Snacks & Munchies -->
+        <div class="mt-8">
+        <p class="sm:text-sm md:text-xl lg:text-2xl font-semibold mb-4">Snacks & Munchies <button type="button" class="float-end bg-white border-0 text-green-500">see all</button></p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4">
+            <!-- product card -->
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\cheetos flamin hot.avif"
+                alt="Product 1"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">cheetos flamin hot</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+           
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\kurkure solid masti.avif"
+                alt="Product 2"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+          <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">kurkure solid masti</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 20 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\crunchex simply salted.avif"
+                alt="Product 3"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+          <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">crunchex simply salted</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\crunchex chilli tadka.avif"
+                alt="Product 4"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">crunchex chilli tadka</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+
+             <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\masala masti wafer.avif"
+                alt="Product 5"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">masala masti wafer</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+             <div class="bg-white rounded-lg shadow p-4">
+            <img
+                src="d:\frontend\modual-5 tailwind\image\shing peanuts.avif"
+                alt="Product 6"
+                class="w-full h-40 object-cover rounded-md mb-4"
+            />
+              <p class="sm:text-sm md:text-sm lg:text-xl  mb-4"> balaji shing peanuts</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">Pack of 1</p>
+            <p class="sm:text-sm md:text-sm lg:text-xl  mb-4">₹ 120 <button type="button" class="border-1 border-green-500 p-1 float-end rounded-xl">ADD</button></p>
+            </div>
+
+          </div>
+        </div>
+</section>
+<!-- create a footer of blinkit -->
+ <footer class="bg-black mt-10 py-10">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Top Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-gray-700">
+      <!-- About -->
+      <div>
+        <h3 class="font-bold text-lg mb-3 text-white">About Blinkit</h3>
+        <ul class="space-y-2 text-sm text-white">
+          <li><a href="#" class="hover:text-gray-500">About us</a></li>
+          <li><a href="#" class="hover:text-gray-500">Careers</a></li>
+          <li><a href="#" class="hover:text-gray-500">Press</a></li>
+        </ul>
+      </div>
+      <!-- Categories -->
+      <div>
+        <h3 class="font-bold text-lg mb-3 text-white">Categories</h3>
+        <ul class="space-y-2 text-sm text-white">
+          <li><a href="#" class="hover:text-gray-500">Fruits & Vegetables</a></li>
+          <li><a href="#" class="hover:text-gray-500">Dairy & Bakery</a></li>
+          <li><a href="#" class="hover:text-gray-500">Snacks & Beverages</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Help -->
+      <div>
+        <h3 class="font-bold text-lg mb-3 text-white">Customer Help</h3>
+        <ul class="space-y-2 text-sm text-white">
+          <li><a href="#" class="hover:text-gray-500">FAQ</a></li>
+          <li><a href="#" class="hover:text-gray-500">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-gray-500">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      
+
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-300 my-6"></div>
+
+    <!-- Bottom Section -->
+    <div class="text-center text-sm text-white">
+      &copy; 2024 Blinkit. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- login form modal -->
+<el-dialog>
+  <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent top-0   mt-5">
+    <el-dialog-backdrop class="fixed inset-0 bg-gray-300 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+    <div tabindex="0" class="w-100 mx-auto mt-15 min-h-full rounded-2xl items-end justify-center p-10 text-center focus:outline-none sm:items-center sm:p-0">
+      
+      <el-dialog-panel class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+
+        <div class="bg-white p-15 px-4 pt-5 pb-4 sm:p-0 sm:pb-0">
+          <div class="sm:flex sm:items-start">
+           
+            <div class="mt-3 text-center p-10 sm:mt-0 sm:ml-4 sm:text-left">
+              <h3 id="dialog-title" class="font-semibold text-gray-900 text-4xl">Login Form 👤</h3>
+              <div class="mt-2 ">
+                <form class="space-y-4">
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                    <input type="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 focus:outline-none focus:ring-yellow-400 focus:border-yellow-400" placeholder="you@example.com" />
+                  </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 focus:outline-none focus:ring-yellow-400 focus:border-yellow-400" placeholder="Enter your password" />
+                    </div>
+
+                     <div>
+                      
+                        <input type="submit" id="password" class="mt-1 block w-full border border-red-500 bg-red-500 rounded-md shadow-sm px-3 py-2 focus:outline-none focus:ring-yellow-400 focus:border-yellow-400" placeholder="Enter your password" value="Login" />
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </el-dialog-panel>
+    </div>
+  </dialog>
+</el-dialog>
+<!-- cart  modal -->
+<el-dialog>
+  <dialog id="dialog1" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent top-0   mt-5">
+    <el-dialog-backdrop class="fixed inset-0 bg-gray-300 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+    <div tabindex="0" class="w-100 mx-auto mt-25 rounded-2xl min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+      <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start p-10">
+           
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <h3 id="dialog-title" class="font-semibold text-gray-900 text-4xl">Cart Items</h3>
+                <div class="mt-2">
+                <p class="text-gray-500">Your cart is currently empty.</p>
+                <!-- add button go to home -->
+                <div class="mt-4">
+                   <!-- create a login button -->
+                     <button command="show-modal" commandfor="dialog"class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 w-full">Login</button>
+                </div>
+           
+            </div>
+          </div>
+        </div>
+        
+      </el-dialog-panel>
+    </div>
+  </dialog>
+</el-dialog>
+<!-- modal js -->
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+<!-- simple JS for toggler -->
+<script>
+  const menuBtn = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>
